@@ -1,4 +1,6 @@
 const express = require("express");
+const routes = require("./routes");
+
 
 const app = express();
 
@@ -10,14 +12,17 @@ app.use(express.json());
  *               Acesso: const query  = req.query
  * Route params: parametros para identificar recursos (users/:id))
  *               Acesso: const params = req.params
- * Request Body: parametros utilizados para enviar informações
+ * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
  */
 
-app.get('/',(req, res)=>{
-    return res.json({
-        evento: "Semana OmniStack",
-        aluno: "Jonathan da Cunha Oliveira"
-    });
-})
+ /**
+  * Driver: SELECT * FROM users
+  * Query Builder: table('users').selec(*).where()
+  */
+
+
+  app.use(routes);
+
+
 
 app.listen(3333);
