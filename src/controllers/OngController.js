@@ -22,7 +22,7 @@ module.exports = {
             city,
             uf
         })
-        return res.json(id);
+        return res.json({id});
     }
 
 }
