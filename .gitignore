@@ -2,4 +2,4 @@ node_modules
 .vscode
 info.txt
 src/database/db.sqlite
-src/database.test.sqlite
+src/database/test.sqlite
